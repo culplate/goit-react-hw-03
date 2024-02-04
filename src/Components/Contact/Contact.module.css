@@ -1,0 +1,32 @@
+.card {
+  max-width: 260px;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #181818;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateX(-3px);
+}
+
+.card div:last-child {
+  margin-top: 8px;
+}
+
+.dltBtn {
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+p {
+  line-height: 1;
+}
+
+.userWrap {
+  display: flex;
+  gap: 6px;
+}
