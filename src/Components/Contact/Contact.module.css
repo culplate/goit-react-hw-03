@@ -1,16 +1,17 @@
 .card {
-  max-width: 260px;
+  width: 290px;
   padding: 10px 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border: 1px solid #181818;
   border-radius: 4px;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .card:hover {
   transform: translateX(-3px);
+  background-color: #fffbf5;
 }
 
 .card div:last-child {
