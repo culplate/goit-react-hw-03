@@ -23,10 +23,8 @@ function App() {
   });
 
   useEffect(() => {
-    window.localStorage.setItem("saved-contacts", JSON.stringify(contact), [
-      contact,
-    ]);
-  });
+    window.localStorage.setItem("saved-contacts", JSON.stringify(contact))
+  }, [contact]);
 
   // search logic
   const [searchVal, setSearchVal] = useState("");
