@@ -10,7 +10,7 @@ export const ContactForm = ({ onAdd }) => {
       .max(50, "Too Long! (max. 50 symbols)")
       .required("Required field"),
     number: Yup.string()
-      .min(5, "Must be at lest 5 sybmols long")
+      .min(5, "Must be at least 5 sybmols long")
       .max(12, "Too Long! (max. 12 symbols)")
       .required("Required field"),
   });
