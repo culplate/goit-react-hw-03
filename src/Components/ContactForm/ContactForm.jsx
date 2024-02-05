@@ -37,6 +37,7 @@ export const ContactForm = ({ onAdd }) => {
             type="text"
             name="name"
             id="contactname"
+            autoComplete="name"
           />
           <ErrorMessage className={css.error} component="span" name="name" />
         </div>
@@ -50,6 +51,7 @@ export const ContactForm = ({ onAdd }) => {
             type="number"
             name="number"
             id="contactnumber"
+            autoComplete="tel"
           />
           <ErrorMessage className={css.error} component="span" name="number" />
         </div>

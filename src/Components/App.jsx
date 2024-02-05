@@ -21,10 +21,17 @@ function App() {
     item.name.toLowerCase().includes(searchVal.toLowerCase())
   );
 
-  //adding contacts logic
+  // adding contacts logic
   const addContact = (newContact) => {
     setContact((prevContacts) => {
       return [...prevContacts, newContact];
+    });
+  };
+
+  // deleting contacts logic
+  const deleteContact = (contactId) => {
+    setContact((prevContacts) => {
+      return prevContacts.filter((item) => item.id !== contactId);
     });
   };
 
@@ -33,7 +40,7 @@ function App() {
       <h1>Phonebook</h1>
       <ContactForm onAdd={addContact} />
       <SearchBox val={searchVal} onSearch={handleSearch} />
-      <ContactList contacts={filteredContacts} />
+      <ContactList contacts={filteredContacts} onDelete={deleteContact} />
     </>
   );
 }

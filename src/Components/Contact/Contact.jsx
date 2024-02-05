@@ -1,9 +1,9 @@
 import css from "./Contact.module.css";
 import { FaUser, FaPhoneSquare } from "react-icons/fa";
 
-export const Contact = ({ item }) => {
+export const Contact = ({ item, onDelete }) => {
   return (
-    <li className={css.card}>
+    <li className={css.card} id={item.id}>
       <div>
         <div className={css.userWrap}>
           <FaUser className={css.icon} />
@@ -14,7 +14,9 @@ export const Contact = ({ item }) => {
           <p>{item.number}</p>
         </div>
       </div>
-      <button className={css.dltBtn}>Delete</button>
+      <button onClick={() => onDelete(item.id)} className={css.dltBtn}>
+        Delete
+      </button>
     </li>
   );
 };
